@@ -1,0 +1,85 @@
+<section id="hero" style="top: 0%">
+  <div
+    class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center"
+  >
+    <div data-aos="zoom-out" style="margin-bottom: 18%">
+      <h1><span>Patient Consultation Manager </span></h1>
+      <h2>Gracias por preferir Patient Consultation Manager.</h2>
+      <div *ngIf="loggedIn">
+        <a class="btn-get-started scrollto">Configuración Inicial</a>
+        <a
+          *ngIf="isAdmin"
+          class="btn-get-started scrollto"
+          style="margin-left: 5px"
+          >Crear Usuario</a
+        >
+        <a class="btn-get-started scrollto" style="margin-left: 5px"
+          >Manejar Usuarios</a
+        >
+        <a class="btn-get-started scrollto" style="margin-left: 5px">ARS</a>
+        <a
+          *ngIf="isAdmin"
+          class="btn-get-started scrollto"
+          style="margin-left: 5px"
+          >Entidad</a
+        >
+        <a
+          *ngIf="isAdmin"
+          class="btn-get-started scrollto"
+          style="margin-left: 5px"
+          >Logger</a
+        >
+      </div>
+    </div>
+  </div>
+  <div
+    class="col-lg-5 order-1 order-lg-2 hero-img"
+    data-aos="fade-left"
+    data-aos-delay="300"
+  >
+    <img
+      *ngIf="!loggedIn"
+      src="../assets/images/table.png"
+      class="img-fluid animated"
+      (error)="updateURL($event)"
+    />
+    <img
+      *ngIf="loggedIn"
+      src="../assets/images/Table with doctor.png"
+      class="img-fluid animated"
+      (error)="updateURL($event)"
+    />
+  </div>
+
+  <div
+    class="col-lg-5 order-1 order-lg-2 hero-img"
+    data-aos="fade-left"
+    data-aos-delay="300"
+  >
+    <!-- <img src="/src/assets/Images/table.png" class="img-fluid animated" alt="" /> -->
+  </div>
+
+  <svg
+    class="hero-waves"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28 "
+    preserveAspectRatio="none"
+  >
+    <defs>
+      <path
+        id="wave-path"
+        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+      />
+    </defs>
+    <g class="wave1">
+      <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)" />
+    </g>
+    <g class="wave2">
+      <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)" />
+    </g>
+    <g class="wave3">
+      <use xlink:href="#wave-path" x="50" y="9" fill="#fff" />
+    </g>
+  </svg>
+</section>
